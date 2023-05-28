@@ -127,7 +127,7 @@ public class dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_gotodbopsActionPerformed
 
     private void gotobillsysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotobillsysActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_gotobillsysActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
