@@ -8,12 +8,12 @@ package com.mycompany.dbms_project;
  *
  * @author Lenovo
  */
-public class opertion extends javax.swing.JFrame {
+public class database_ops extends javax.swing.JFrame {
 
     /**
      * Creates new form opertion
      */
-    public opertion() {
+    public database_ops() {
         initComponents();
     }
 
@@ -27,42 +27,30 @@ public class opertion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
         jPanel3 = new javax.swing.JPanel();
-        item_type1 = new javax.swing.JComboBox<>();
+        main_type = new javax.swing.JComboBox<>();
         brand = new javax.swing.JComboBox<>();
         sub_type = new javax.swing.JComboBox<>();
         quantity = new javax.swing.JTextField();
-        add_button = new javax.swing.JButton();
-        add_button1 = new javax.swing.JButton();
+        quantity1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        insert = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        back_dashboard = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setToolTipText("");
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTextPane1.setBackground(new java.awt.Color(153, 255, 153));
-        jTextPane1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jTextPane1.setText("                      \n                    \n                    Fertilizer Management System");
-        jScrollPane1.setViewportView(jTextPane1);
-
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 120));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 640, 120));
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 0));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        item_type1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fertilizer", "Pesticide" }));
-        jPanel3.add(item_type1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 50));
+        main_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fertilizer", "Pesticide" }));
+        jPanel3.add(main_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 40));
 
         brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D" }));
-        jPanel3.add(brand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 190, 50));
+        jPanel3.add(brand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 640, 40));
 
         sub_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nitrogen", "Potassium", "Phosphorous" }));
         sub_type.addActionListener(new java.awt.event.ActionListener() {
@@ -70,23 +58,51 @@ public class opertion extends javax.swing.JFrame {
                 sub_typeActionPerformed(evt);
             }
         });
-        jPanel3.add(sub_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 190, 50));
+        jPanel3.add(sub_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 640, 40));
 
-        quantity.setText("Quantity");
         quantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quantityActionPerformed(evt);
             }
         });
-        jPanel3.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 190, 50));
+        jPanel3.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 90, 40));
 
-        add_button.setText("BACK TO HOMEPAGE");
-        jPanel3.add(add_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 150, 50));
+        quantity1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantity1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(quantity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 90, 40));
 
-        add_button1.setText("INSERT");
-        jPanel3.add(add_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 150, 50));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("Price:");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 90, 30));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 640, 360));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setText("Quantity:");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 185, 90, 30));
+
+        insert.setText("INSERT");
+        jPanel3.add(insert, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 150, 50));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setText("in Kg");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 40, 30));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 640, 360));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Fertilizer Management System");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 110));
+
+        back_dashboard.setText("BACK TO DASHBOARD");
+        back_dashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_dashboardActionPerformed(evt);
+            }
+        });
+        jPanel1.add(back_dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 420, 170, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,7 +112,7 @@ public class opertion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
 
         pack();
@@ -109,6 +125,14 @@ public class opertion extends javax.swing.JFrame {
     private void quantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_quantityActionPerformed
+
+    private void back_dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_dashboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_back_dashboardActionPerformed
+
+    private void quantity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantity1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantity1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,35 +151,38 @@ public class opertion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(opertion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(database_ops.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(opertion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(database_ops.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(opertion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(database_ops.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(opertion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(database_ops.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new opertion().setVisible(true);
+                new database_ops().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton add_button;
-    private javax.swing.JButton add_button1;
+    private javax.swing.JButton back_dashboard;
     private javax.swing.JComboBox<String> brand;
-    private javax.swing.JComboBox<String> item_type1;
+    private javax.swing.JButton insert;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JComboBox<String> main_type;
     private javax.swing.JTextField quantity;
+    private javax.swing.JTextField quantity1;
     private javax.swing.JComboBox<String> sub_type;
     // End of variables declaration//GEN-END:variables
 }
